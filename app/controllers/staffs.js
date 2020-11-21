@@ -6,8 +6,8 @@ exports.AddStaff = async (req, res, next) => {
       name: req.body.name,
       position: req.body.position,
       description: req.body.description,
+      picture: req.uploaded.filePath,
     });
-    console.log(JSON.stringify(req.files));
     res
       .status(201)
       .json({ success: "Staff is successful created", payload: response });
