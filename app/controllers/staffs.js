@@ -1,6 +1,5 @@
 const Staffs = require("../models/staffs_tb");
 exports.AddStaff = async (req, res, next) => {
-  console.log(req);
   try {
     const response = await Staffs.create({
       name: req.body.name,
