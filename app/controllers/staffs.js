@@ -27,4 +27,21 @@ exports.getAllStaffs = async (req, res) => {
   }
 };
 
-exports.deleteStaff = (req, res, next) => {};
+exports.deleteStaff = async (req, res, next) => {
+  try {
+    const { id } = req.params; //the id of the staff we're tryig to delete
+    const response = await Staffs.destroy({
+      where: { id },
+    });
+    res
+      .status(201)
+      .json({ success: true, data: null, message: "Successful deleted staff" });
+  } catch (e) {
+    console.log(e);
+    res.status(401).json({
+      success: false,
+      data: null,
+      message: "An error occured",
+    });
+  }
+};

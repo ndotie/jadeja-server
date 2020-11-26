@@ -1,0 +1,16 @@
+{
+  "short_name": "Jadeja",
+  "name": "Jadeja Farming LTD",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "200x200",
+      "type": "image/x-icon"
+    },
+    
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
