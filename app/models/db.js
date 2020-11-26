@@ -9,6 +9,10 @@ const database = new Sequelize(
       "ls-feb5ed1f348d5b6bed0187196c9dbf3d4117a04f.c0r2za0sodgr.us-east-1.rds.amazonaws.com",
     port: 3306,
     dialect: "mysql",
+    dialectOptions: {
+      ssl: "Amazon RDS",
+    },
+    pool: { maxConnections: 5, maxIdleTime: 30 },
   }
 );
 
