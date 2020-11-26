@@ -6,11 +6,15 @@ const database = new Sequelize(
   "nVd[|[rb,gb8B#X`k{*#$n2[KUDPlwDI", //password
   {
     host:
-      "ls-feb5ed1f348d5b6bed0187196c9dbf3d4117a04f.c0r2za0sodgr.us-east-1.rds.amazonaws.com:3306",
+      "ls-feb5ed1f348d5b6bed0187196c9dbf3d4117a04f.c0r2za0sodgr.us-east-1.rds.amazonaws.com",
+    port: 3306,
     dialect: "mysql",
   }
 );
 
-database.sync();
+database
+  .sync()
+  .then((r) => {})
+  .catch((e) => console.log(e));
 
 module.exports = database;
