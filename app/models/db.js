@@ -1,7 +1,7 @@
 const { Sequelize } = require("sequelize");
 const sequelize = require("sequelize");
 const database = new Sequelize(
-  "jadejadb", //db name
+  "dbmasteruser", //db name
   "dbmasteruser", //database user
   "nVd[|[rb,gb8B#X`k{*#$n2[KUDPlwDI", //password
   {
