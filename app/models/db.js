@@ -1,12 +1,12 @@
 const { Sequelize } = require("sequelize");
 const sequelize = require("sequelize");
 const database = new Sequelize(
-  "dbmasteruser", //db name
-  "dbmasteruser", //database user
-  "nVd[|[rb,gb8B#X`k{*#$n2[KUDPlwDI", //password
+  "dbjadeja", //db name
+  "jadejaadmin", //database user
+  "JadejaFarms99!", //password
   {
     host:
-      "ls-feb5ed1f348d5b6bed0187196c9dbf3d4117a04f.c0r2za0sodgr.us-east-1.rds.amazonaws.com",
+      "ls-99d6edbb52e541ce8c40905abc4f74aa4fbe3e9b.c0r2za0sodgr.us-east-1.rds.amazonaws.com",
     port: 3306,
     dialect: "mysql",
     dialectOptions: {
