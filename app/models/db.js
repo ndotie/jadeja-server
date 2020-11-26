@@ -9,10 +9,27 @@ const database = new Sequelize(
       "ls-99d6edbb52e541ce8c40905abc4f74aa4fbe3e9b.c0r2za0sodgr.us-east-1.rds.amazonaws.com",
     port: 3306,
     dialect: "mysql",
-    dialectOptions: {
-      ssl: "Amazon RDS",
+    retry: {
+      match: [
+        /ETIMEDOUT/,
+        /EHOSTUNREACH/,
+        /ECONNRESET/,
+        /ECONNREFUSED/,
+        /ETIMEDOUT/,
+        /ESOCKETTIMEDOUT/,
+        /EHOSTUNREACH/,
+        /EPIPE/,
+        /EAI_AGAIN/,
+        /SequelizeConnectionError/,
+        /SequelizeConnectionRefusedError/,
+        /SequelizeHostNotFoundError/,
+        /SequelizeHostNotReachableError/,
+        /SequelizeInvalidConnectionError/,
+        /SequelizeConnectionTimedOutError/,
+      ],
+      max: 5,
+      pool: { maxConnections: 5, maxIdleTime: 30, minConnections: 1 },
     },
-    pool: { maxConnections: 5, maxIdleTime: 30 },
   }
 );
 
