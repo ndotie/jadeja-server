@@ -13,6 +13,14 @@ const Slides = sequelize.define("slides", {
     type: Sequelize.INTEGER,
     allowNull: false,
   },
+  slide_no: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+  },
+  title: {
+    type: Sequelize.TEXT,
+    allowNull: false,
+  },
   brief: Sequelize.TEXT,
 });
 

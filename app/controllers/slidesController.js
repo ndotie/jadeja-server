@@ -5,6 +5,8 @@ router.addSlide = async (req, res) => {
     const response = await Slides.create({
       service_id: req.body.service_id,
       brief: req.body.brief,
+      title: req.body.title,
+      slide_no: req.body.slide_no,
     });
     res.status(201).json({ success: true, contents: response });
   } catch (e) {
