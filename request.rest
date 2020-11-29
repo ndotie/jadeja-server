@@ -1,0 +1,36 @@
+
+POST http://localhost:5050/legal
+Content-Type:"application/json"
+{'S' : 'TIN NUMBER','value' : 'TZ:I42ETZ/441'}
+
+
+###
+GET  http://localhost:5050/users
+//Meen we're going to do it really good at this point onwards men!! love it here!
+###
+POST http://localhost:5050/login
+Content-Type: application/json
+
+{"username" : "Ndotizy"}
+
+###
+POST http://localhost:5050/stupid 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDY2MzQ0MTl9.2_0WI10v2ZzNfueaaWeCV4tRseg1lAupORFl9Tm-riw
+
+{"user" : "Ndotizy"}
+
+###
+POST http://localhost:5050/stupid1 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDY2MzQxNTB9.Ey5tGltCAX2d45Hxzh02wFVicwdMdyCkpxBcBQWVZ2k
+
+{"user" : "Ndotizy"}
+
+###
+POST http://localhost:5050/stupid2 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDY2MzQxNTB9.Ey5tGltCAX2d45Hxzh02wFVicwdMdyCkpxBcBQWVZ2k
+
+{"user" : "Ndotizy"}
+
