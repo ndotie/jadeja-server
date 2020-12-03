@@ -11,6 +11,11 @@ const social = require("./app/routes/socialRoutes");
 const slideShow = require("./app/routes/slidesRoutes");
 const legals = require("./app/routes/legalRoutes");
 const terms = require("./app/routes/termsRoutes");
+const commit = require("./app/routes/commitRoutes");
+const stats = require("./app/routes/statsRoutes");
+const partner = require("./app/routes/partnerRoutes");
+const wedo = require("./app/routes/wedoRoutes");
+
 const adminRouters = require("./app/routes/adminRoutes");
 const path = require("path");
 const jwt = require("jsonwebtoken");
@@ -39,6 +44,11 @@ app.use(slideShow);
 app.use(legals);
 app.use(terms);
 app.use(adminRouters);
+app.use(commit);
+app.use(stats);
+app.use(partner);
+app.use(wedo);
+
 app.post("/login", (req, res) => {
   const username = req.body.username;
   console.log(username);
