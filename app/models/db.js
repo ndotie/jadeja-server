@@ -39,6 +39,8 @@ database
   .then((r) => {})
   .catch((e) => console.log(e));
 
+module.exports = database;
+
 // const develop = new Sequelize(
 //   "jadejadb", //db name
 //   "root", //database user
