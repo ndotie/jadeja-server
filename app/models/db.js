@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 const sequelize = require("sequelize");
-/*
+
 const database = new Sequelize(
   "dbjadeja", //db name
   "jadejaadmin", //database user
@@ -38,28 +38,28 @@ database
   .sync()
   .then((r) => {})
   .catch((e) => console.log(e));
-*/
-const develop = new Sequelize(
-  "jadejadb", //db name
-  "root", //database user
-  "", //password
-  {
-    host: "localhost",
-    dialect: "mysql",
-    logging: function (e) {
-      console.log(e);
-    },
-    pool: {
-      max: 5,
-      min: 0,
-      idle: 10000,
-    },
-  }
-);
 
-develop
-  .sync()
-  .then((r) => {})
-  .catch((e) => console.log(e));
+// const develop = new Sequelize(
+//   "jadejadb", //db name
+//   "root", //database user
+//   "", //password
+//   {
+//     host: "localhost",
+//     dialect: "mysql",
+//     logging: function (e) {
+//       console.log(e);
+//     },
+//     pool: {
+//       max: 5,
+//       min: 0,
+//       idle: 10000,
+//     },
+//   }
+// );
 
-module.exports = develop;
+// develop
+//   .sync()
+//   .then((r) => {})
+//   .catch((e) => console.log(e));
+
+// module.exports = develop;
