@@ -15,7 +15,7 @@ exports.AddStats = async (req, res, next) => {
 };
 exports.getStats = async (req, res, next) => {
   try {
-    const resp = await Stats.getAll();
+    const resp = await Stats.findAll();
     res.status(200).json({ success: true, contents: resp });
   } catch (e) {
     console.log(e);
