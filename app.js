@@ -69,5 +69,8 @@ app.post("/stupid1", auth, (req, res) => {
 app.post("/stupid2", auth, (req, res) => {
   res.send(req.body.user);
 });
+app.use("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 app.listen(port, () => console.log(`listening on port ${port}`));
