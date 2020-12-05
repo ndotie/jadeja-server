@@ -9,7 +9,8 @@ const Terms = sequelize.define("Terms", {
     primaryKey: true,
     autoIncrement: true,
   },
-  term: Sequelize.STRING,
+  term: Sequelize.TEXT,
+  registration: Sequelize.TEXT,
 });
 
 module.exports = Terms;

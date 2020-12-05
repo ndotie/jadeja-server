@@ -5,6 +5,7 @@ exports.UpdateSocial = async (req, res) => {
     if (lastRec.length < 1) {
       const response = await Terms.create({
         term: req.body.term,
+        registration: req.body.registration,
       });
       res.status(201).json({
         success: "Successful created  terms and conditions",
@@ -16,6 +17,7 @@ exports.UpdateSocial = async (req, res) => {
       const response = await Terms.update(
         {
           term: req.body.term,
+          registration: req.body.registration,
         },
         {
           where: { id: lastRec[0].id },
